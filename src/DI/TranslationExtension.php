@@ -75,7 +75,7 @@ class TranslationExtension extends CompilerExtension
 			]),
 			'dirs' => Expect::array()->default([]),
 			'cache' => Expect::structure([
-				'dir' => Expect::string($builder->parameters['tempDir'] . '/cache/translation'),
+				'dir' => Expect::string($builder->parameters['tempDir'] . '/cache/translation')->nullable(),
 				'factory' => Expect::string(ConfigCacheFactory::class),
 				'vary' => Expect::array()->default([]),
 			]),
